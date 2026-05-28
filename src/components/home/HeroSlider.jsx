@@ -17,7 +17,7 @@ import {
   FiArrowRight,
 } from 'react-icons/fi';
 
-const SLIDE_DURATION = 4000;
+const SLIDE_DURATION = 3000;
 
 const slides = [
   {
@@ -96,7 +96,6 @@ const slideVariants = {
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [paused, setPaused] = useState(false);
   const intervalRef = useRef(null);
   const slide = slides[current];
 
@@ -116,7 +115,6 @@ export default function HeroSlider() {
   }, []);
 
   useEffect(() => {
-    if (paused) return;
     const tick = 50;
     intervalRef.current = setInterval(() => {
       setProgress((p) => {
@@ -129,13 +127,11 @@ export default function HeroSlider() {
       });
     }, tick);
     return () => clearInterval(intervalRef.current);
-  }, [paused, current]);
+  }, [current]);
 
   return (
     <section
       className="relative min-h-[92vh] flex items-center overflow-hidden pt-20"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       aria-label="Homepage hero slider"
     >
       {/* Light lavender background */}
