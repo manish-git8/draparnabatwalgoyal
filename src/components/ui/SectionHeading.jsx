@@ -9,7 +9,7 @@ export default function SectionHeading({ badge, title, subtitle, center = true, 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
-      className={`mb-10 md:mb-14 ${center ? 'text-center' : ''}`}
+      className={`mb-8 md:mb-10 ${center ? 'text-center' : ''}`}
     >
       {badge && (
         <span className={`inline-block px-4 py-1.5 rounded-full text-[11px] md:text-xs font-semibold tracking-wider uppercase mb-4 ${

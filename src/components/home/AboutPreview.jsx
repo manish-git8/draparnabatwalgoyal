@@ -29,12 +29,12 @@ export default function AboutPreview() {
           >
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute -top-4 -left-4 w-full h-full bg-lavender-100 rounded-3xl" />
-              <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[3/4]">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[5/6]">
                 <Image
                   src="/doctor-profile.jpg"
                   alt="Dr. Aparna — About"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[center_18%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
@@ -61,9 +61,12 @@ export default function AboutPreview() {
             <SectionHeading
               badge="About the Doctor"
               title="Dedicated to Diagnostic Excellence"
-              subtitle="Dr. Aparna is a highly skilled radiologist with a passion for accurate diagnosis and patient-centered care."
               center={false}
             />
+
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-snug mb-4">
+              Dr. Aparna is a highly skilled radiologist with a passion for accurate diagnosis and patient-centered care.
+            </h3>
 
             <p className="text-gray-500 leading-relaxed mb-6">
               With over a decade of experience in diagnostic radiology, Dr. Aparna has established herself as a 

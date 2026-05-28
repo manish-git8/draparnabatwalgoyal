@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FiPhone, FiMail, FiMapPin, FiClock, FiArrowRight } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
@@ -42,14 +43,20 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="gradient-footer pt-16 pb-8">
+      <div className="gradient-footer pt-16 pb-6">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             {/* Brand Column */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center text-white font-bold text-lg">
-                  D
+                <div className="w-10 h-10 rounded-xl overflow-hidden">
+                  <Image
+                    src="/dr-aparna-logo.svg"
+                    alt="Dr. Aparna logo"
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <span className="text-lg font-bold text-white">Dr. Aparna</span>

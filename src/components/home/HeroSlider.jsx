@@ -17,7 +17,7 @@ import {
   FiArrowRight,
 } from 'react-icons/fi';
 
-const SLIDE_DURATION = 3000;
+const SLIDE_DURATION = 4000;
 
 const slides = [
   {
@@ -58,39 +58,34 @@ const slides = [
   {
     id: 'usg',
     type: 'service',
-    badge: 'Precision Ultrasound',
+    badge: 'Consona N9 Precision Ultrasound',
     headline: 'USG & Ultrasound',
     highlight: 'Trusted Diagnostic Imaging',
     subheadline:
-      'HD ultrasound with color Doppler and expert radiologist interpretation for fast, reliable medical insights.',
+      'Consona N9 with ZST+ technology, advanced Doppler flow imaging, and AI-enabled women/fetal tools for fast and reliable diagnostic insights.',
     image: '/images/slider-usg.png',
     imageAlt: 'Ultrasound and USG diagnostics',
-    features: ['HD Ultrasound', 'Color Doppler', 'Expert Review', 'Instant Imaging'],
+    features: ['ZST+ Imaging', 'Color/Power Doppler', 'AI OB-GYN Tools', 'Expert Review'],
     primaryCta: { label: 'Book USG', href: '/appointment?service=usg' },
     secondaryCta: { label: 'Learn More', href: '/services/usg-ultrasound' },
     accent: '#8B5CF6',
   },
-  {
-    id: 'fetal',
-    type: 'service',
-    badge: 'Fetal Medicine Specialist',
-    headline: 'Fetal Medicine',
-    highlight: 'Advanced Prenatal Care',
-    subheadline:
-      'Fellowship-level fetal imaging with detailed anatomy scans, 3D/4D views, and early anomaly detection for peace of mind.',
-    image: '/images/slider-fetal-medicine.png',
-    imageAlt: 'Fetal medicine and prenatal imaging',
-    features: ['Fellowship Care', 'Detailed Anatomy', '3D/4D Imaging', 'Early Detection'],
-    primaryCta: { label: 'Book Fetal Scan', href: '/appointment?service=fetal-medicine-imaging' },
-    secondaryCta: { label: 'Learn More', href: '/services/fetal-medicine-imaging' },
-    accent: '#A78BFA',
-  },
 ];
 
 const slideVariants = {
-  enter: { opacity: 0, x: 48 },
-  center: { opacity: 1, x: 0, transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] } },
-  exit: { opacity: 0, x: -48, transition: { duration: 0.4 } },
+  enter: { opacity: 0, x: 20, scale: 0.996 },
+  center: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: { duration: 0.9, ease: [0.25, 0.1, 0.25, 1] },
+  },
+  exit: {
+    opacity: 0,
+    x: -20,
+    scale: 0.996,
+    transition: { duration: 0.75, ease: [0.4, 0, 0.2, 1] },
+  },
 };
 
 export default function HeroSlider() {
@@ -131,7 +126,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative min-h-[92vh] flex items-center overflow-hidden pt-20"
+      className="relative min-h-[84vh] flex items-center overflow-hidden pt-20"
       aria-label="Homepage hero slider"
     >
       {/* Light lavender background */}
@@ -140,8 +135,8 @@ export default function HeroSlider() {
       <div className="absolute bottom-0 left-0 w-[min(420px,45vw)] h-[min(420px,45vw)] bg-lavender-200/30 rounded-full blur-[90px]" />
       <div className="absolute inset-0 dot-pattern opacity-40" />
 
-      <div className="container-custom relative z-10 py-10 md:py-14 lg:py-16">
-        <AnimatePresence mode="wait">
+      <div className="container-custom relative z-10 py-8 md:py-10 lg:py-12">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={slide.id}
             variants={slideVariants}
@@ -257,7 +252,7 @@ export default function HeroSlider() {
                     src={slide.image}
                     alt={slide.imageAlt}
                     fill
-                    priority={current === 0}
+                    priority
                     className={`object-cover ${slide.type === 'intro' ? 'object-top' : 'object-center'}`}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
@@ -282,7 +277,7 @@ export default function HeroSlider() {
         </AnimatePresence>
 
         {/* Slider controls */}
-        <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-7 md:mt-9 flex flex-col sm:flex-row items-center justify-between gap-5">
           <div className="flex items-center gap-2">
             {slides.map((s, i) => (
               <button

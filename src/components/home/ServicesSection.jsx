@@ -10,9 +10,10 @@ import { services } from '@/data/services';
 const getServiceImage = (slug) => {
   if (slug === 'ct-scan') return '/images/slider-ct-scan.png';
   if (slug === 'usg-ultrasound') return '/images/slider-usg.png';
+  if (slug === 'usg-guided-procedures') return '/images/service-usg-guided.svg';
   if (slug === 'fetal-medicine-imaging') return '/images/slider-fetal-medicine.png';
-  if (slug === 'oncology-imaging') return '/images/cta-bg-network.png';
-  if (slug === 'diagnostic-consultation') return '/images/eb3b6774-9ed1-4c1f-84a9-1a8262824207.jpg';
+  if (slug === 'oncology-imaging') return '/images/service-oncology.svg';
+  if (slug === 'diagnostic-consultation') return '/images/service-consultation.svg';
   if (slug === 'advanced-imaging') return '/images/cta-bg-network.png';
   if (slug === 'msk-radiology') return '/images/hero-bg-medical.png';
   return '/images/hero-bg-medical.png';

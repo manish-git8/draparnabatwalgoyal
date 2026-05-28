@@ -2,24 +2,47 @@ export const services = [
   {
     slug: 'usg-ultrasound',
     title: 'USG (Ultrasound)',
-    shortDesc: 'High-resolution diagnostic ultrasound imaging for precise evaluation of internal organs and structures.',
+    shortDesc: 'Consona N9 based high-resolution ultrasound with advanced Doppler and AI-assisted tools for precise diagnosis.',
     icon: '🔬',
     image: '/services/usg.jpg',
-    overview: 'Ultrasound imaging (USG) uses high-frequency sound waves to create detailed images of internal body structures. It is a safe, non-invasive, and painless diagnostic tool widely used for evaluating organs such as the liver, kidneys, gallbladder, uterus, and more.',
+    overview: 'At SNG Hospital, ultrasound imaging is performed on the Mindray Consona N9 platform with ZST+ architecture for improved image quality, dynamic pixel focusing, and better tissue clarity. It is a safe, non-invasive, and painless diagnostic tool used for abdomen, pelvis, gynecology, obstetrics, vascular, small parts, and emergency evaluations.',
     benefits: [
       'Non-invasive and radiation-free imaging',
       'Real-time visualization of organs',
       'Safe for pregnant women and children',
       'Quick results with immediate interpretation',
-      'Cost-effective diagnostic option',
-      'No preparation needed for most scans'
+      'Color Doppler and Power Doppler flow assessment',
+      'Advanced tools like elastography and needle visualization when indicated'
     ],
-    procedure: 'During an ultrasound examination, a gel is applied to the skin over the area being examined. A transducer is then moved over the area, sending sound waves through the body. These waves bounce off internal structures and are converted into detailed images displayed on a monitor. The entire procedure typically takes 15-30 minutes.',
-    whyChoose: 'Dr. Aparna brings over 10 years of experience in ultrasonography with advanced fellowship training. Using state-of-the-art ultrasound equipment at SNG Hospital, she provides comprehensive and accurate diagnostic evaluations with personalized patient care.',
+    procedure: 'During an ultrasound examination, a gel is applied to the skin over the area being examined and the probe is moved to acquire images. Depending on the clinical need, advanced modes such as Doppler flow, fetal measurements, elastography, and structured protocols may be used for higher diagnostic confidence. Most scans are completed in 15-30 minutes.',
+    whyChoose: 'Dr. Aparna combines over 10 years of radiology experience with Consona N9 technology, including ZST+ imaging, AI-assisted women and fetal imaging tools, and multi-application workflows to provide reliable, clinically actionable reports.',
     faqs: [
       { q: 'How should I prepare for an ultrasound?', a: 'Preparation depends on the type of ultrasound. For abdominal scans, you may need to fast for 6-8 hours. For pelvic scans, a full bladder may be required. Our team will provide specific instructions when you book.' },
       { q: 'Is ultrasound safe?', a: 'Yes, ultrasound is one of the safest imaging modalities. It uses sound waves instead of radiation, making it safe for all patients including pregnant women.' },
       { q: 'How long does an ultrasound take?', a: 'Most ultrasound examinations take between 15-30 minutes, depending on the area being examined.' }
+    ]
+  },
+  {
+    slug: 'usg-guided-procedures',
+    title: 'USG-Guided Procedures',
+    shortDesc: 'Image-guided breast biopsy, FNAC, aspiration, and targeted needle procedures with real-time ultrasound guidance.',
+    icon: '💉',
+    image: '/images/service-usg-guided.svg',
+    overview: 'USG-guided procedures use real-time ultrasound imaging to precisely target lesions, cysts, or suspicious tissue for sampling and intervention. This includes breast biopsy support, FNAC, fluid aspiration, and other focused needle guidance procedures with improved accuracy and confidence.',
+    benefits: [
+      'Real-time needle guidance for higher precision',
+      'Useful for breast lesions and superficial masses',
+      'Supports FNAC, biopsy, aspiration, and drainage',
+      'Minimally invasive and generally well tolerated',
+      'Improves diagnostic yield with targeted sampling',
+      'Faster workflow with focused intervention planning'
+    ],
+    procedure: 'After clinical review and imaging correlation, the target area is localized under ultrasound. The skin is cleaned, local anesthesia is used when required, and needle placement is monitored continuously in real time. Tissue or fluid samples are collected and sent for further pathological analysis where indicated.',
+    whyChoose: 'At SNG Hospital, Dr. Aparna performs USG-guided procedures with meticulous imaging-plane control, lesion targeting, and safety-first protocols. Her diagnostic expertise helps clinicians plan the right intervention while reducing repeat procedures.',
+    faqs: [
+      { q: 'What procedures are covered under USG guidance?', a: 'Common procedures include breast lesion targeting, FNAC, core biopsy guidance, cyst aspiration, and selected fluid drainage procedures.' },
+      { q: 'Is USG-guided biopsy painful?', a: 'Most patients feel only mild discomfort. Local anesthesia is used for most biopsy-type procedures to improve comfort.' },
+      { q: 'How long does an USG-guided procedure take?', a: 'Most procedures are completed within 20-40 minutes, depending on target location and complexity.' }
     ]
   },
   {

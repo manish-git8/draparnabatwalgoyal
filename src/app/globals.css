@@ -43,7 +43,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  font-size: clamp(15px, 0.3vw + 14px, 16px);
+  font-size: clamp(14px, 0.2vw + 13.5px, 15.5px);
 }
 
 body {
@@ -53,6 +53,7 @@ body {
     var(--color-background);
   color: var(--color-gray-600);
   font-family: var(--font-body);
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -73,19 +74,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(1.9rem, 3.4vw, 3.25rem);
+  font-size: clamp(1.7rem, 3.1vw, 2.9rem);
 }
 
 h2 {
-  font-size: clamp(1.6rem, 2.6vw, 2.55rem);
+  font-size: clamp(1.45rem, 2.4vw, 2.2rem);
 }
 
 h3 {
-  font-size: clamp(1.2rem, 1.4vw, 1.55rem);
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);
 }
 
 p {
-  font-size: clamp(0.96rem, 0.25vw + 0.9rem, 1.06rem);
+  font-size: clamp(0.92rem, 0.2vw + 0.86rem, 1rem);
 }
 
 img {
@@ -180,7 +181,7 @@ img {
   background:
     radial-gradient(circle at 15% 20%, rgba(167, 139, 250, 0.2), transparent 36%),
     radial-gradient(circle at 85% 80%, rgba(124, 58, 237, 0.22), transparent 32%),
-    linear-gradient(160deg, #1d1333 0%, #281746 42%, #1a0f30 100%);
+    linear-gradient(160deg, #2a1b49 0%, #35215a 42%, #24163f 100%);
 }
 
 /* ============================================
@@ -267,21 +268,21 @@ img {
    ============================================ */
 
 .section-padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 }
 

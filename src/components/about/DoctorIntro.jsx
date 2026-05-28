@@ -18,14 +18,14 @@ export default function DoctorIntro() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white shadow-lavender-500/10"
+              className="relative w-full max-w-md aspect-[5/6] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white shadow-lavender-500/10"
             >
               <Image
                 src="/doctor-profile.jpg"
                 alt="Dr. Aparna Bhatwal Goyal"
                 fill
                 priority
-                className="object-cover object-top"
+                className="object-cover object-[center_18%]"
                 sizes="(max-width: 1024px) 100vw, 450px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-lavender-900/40 via-transparent to-transparent" />
@@ -48,9 +48,9 @@ export default function DoctorIntro() {
               <span className="text-sm font-bold tracking-wider text-lavender-600 uppercase block mb-3">
                 MEET THE DOCTOR
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
                 Dr. Aparna Bhatwal Goyal
-                <span className="text-lavender-600 block text-2xl md:text-3xl font-semibold mt-2">
+                <span className="text-lavender-600 block text-xl md:text-2xl font-bold mt-2">
                   MBBS, MD (Radio-Diagnosis)
                 </span>
               </h1>
