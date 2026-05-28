@@ -27,7 +27,7 @@ export const services = [
     title: 'USG-Guided Procedures',
     shortDesc: 'Image-guided breast biopsy, FNAC, aspiration, and targeted needle procedures with real-time ultrasound guidance.',
     icon: '💉',
-    image: '/images/service-usg-guided.svg',
+    image: '/images/13bd4664-6594-4ac9-ba34-01628126bb95.jpg',
     overview: 'USG-guided procedures use real-time ultrasound imaging to precisely target lesions, cysts, or suspicious tissue for sampling and intervention. This includes breast biopsy support, FNAC, fluid aspiration, and other focused needle guidance procedures with improved accuracy and confidence.',
     benefits: [
       'Real-time needle guidance for higher precision',
