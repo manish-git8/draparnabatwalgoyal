@@ -2,9 +2,18 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FiArrowRight } from 'react-icons/fi';
 import { services } from '@/data/services';
+
+const getServiceImage = (slug) => {
+  if (slug.includes('ct')) return '/images/slider-ct-scan.png';
+  if (slug.includes('usg') || slug.includes('ultrasound')) return '/images/slider-usg.png';
+  if (slug.includes('fetal')) return '/images/slider-fetal-medicine.png';
+  if (slug.includes('oncology')) return '/images/cta-bg-network.png';
+  return '/images/hero-bg-medical.png';
+};
 
 export default function ServicesSection() {
   return (
@@ -17,7 +26,7 @@ export default function ServicesSection() {
           subtitle="State-of-the-art imaging and diagnostic solutions tailored to your healthcare needs."
         />
 
-        <div className="flex flex-col gap-4 max-w-4xl mx-auto mt-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {services.map((service, i) => (
             <motion.div
               key={service.slug}
@@ -27,26 +36,37 @@ export default function ServicesSection() {
               transition={{ duration: 0.5, delay: i * 0.05 }}
             >
               <Link href={`/services/${service.slug}`} className="block">
-                <div className="group flex flex-col md:flex-row md:items-center justify-between p-6 bg-white hover:bg-lavender-50/20 rounded-2xl border border-lavender-100 hover:border-lavender-300/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer">
-                  {/* Left content: Icon + Text */}
-                  <div className="flex items-center gap-5 flex-1">
-                    <div className="w-14 h-14 shrink-0 rounded-xl bg-lavender-100/60 group-hover:bg-lavender-500/10 text-3xl flex items-center justify-center transition-colors duration-300">
+                <div className="group h-full bg-white rounded-2xl border border-lavender-100 hover:border-lavender-300/60 shadow-sm hover:shadow-xl hover:shadow-lavender-200/35 overflow-hidden transition-all duration-300 cursor-pointer">
+                  <div className="relative h-44 overflow-hidden">
+                    <Image
+                      src={getServiceImage(service.slug)}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-lavender-900/45 via-lavender-800/10 to-transparent" />
+                    <div className="absolute top-3 left-3 w-10 h-10 rounded-lg bg-white/85 backdrop-blur-sm text-xl flex items-center justify-center shadow-sm">
                       {service.icon}
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-lavender-600 transition-colors duration-300" style={{ fontFamily: 'var(--font-outfit)' }}>
-                        {service.title}
-                      </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed mt-1">
-                        {service.shortDesc}
-                      </p>
-                    </div>
                   </div>
-                  {/* Right side: Action Link */}
-                  <div className="mt-4 md:mt-0 flex items-center gap-2 text-sm font-semibold text-lavender-600 group-hover:text-lavender-700 shrink-0">
-                    <span className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">Learn More</span>
-                    <div className="w-9 h-9 rounded-lg bg-lavender-50 group-hover:bg-lavender-600 text-lavender-600 group-hover:text-white flex items-center justify-center transition-all duration-300">
-                      <FiArrowRight className="w-4 h-4" />
+
+                  <div className="p-5">
+                    <h3
+                      className="text-lg font-bold text-gray-900 group-hover:text-lavender-700 transition-colors duration-300"
+                      style={{ fontFamily: 'var(--font-outfit)' }}
+                    >
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed mt-2 min-h-[64px]">
+                      {service.shortDesc}
+                    </p>
+
+                    <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-lavender-600 group-hover:text-lavender-700">
+                      <span>Learn More</span>
+                      <div className="w-8 h-8 rounded-lg bg-lavender-50 group-hover:bg-lavender-600 text-lavender-600 group-hover:text-white flex items-center justify-center transition-all duration-300">
+                        <FiArrowRight className="w-4 h-4" />
+                      </div>
                     </div>
                   </div>
                 </div>

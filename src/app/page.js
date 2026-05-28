@@ -1,5 +1,4 @@
-import HeroSection from '@/components/home/HeroSection';
-import DiagnosticsSlider from '@/components/home/DiagnosticsSlider';
+import HeroSlider from '@/components/home/HeroSlider';
 import StatsCounter from '@/components/home/StatsCounter';
 import AboutPreview from '@/components/home/AboutPreview';
 import ExpertiseSection from '@/components/home/ExpertiseSection';
@@ -14,8 +13,7 @@ import MapSection from '@/components/home/MapSection';
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      <DiagnosticsSlider />
-      <HeroSection />
+      <HeroSlider />
       <StatsCounter />
       <AboutPreview />
       <ExpertiseSection />
