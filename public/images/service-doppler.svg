@@ -1,0 +1,35 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5F3FF"/>
+      <stop offset="1" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="240" y1="170" x2="960" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1F2937"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="180" y="110" width="840" height="540" rx="36" fill="#FFFFFF" fill-opacity="0.95" stroke="#C4B5FD" stroke-width="8"/>
+  <rect x="240" y="170" width="720" height="360" rx="26" fill="url(#screen)"/>
+
+  <!-- Doppler color flow area -->
+  <ellipse cx="500" cy="330" rx="150" ry="95" fill="#1D4ED8" fill-opacity="0.35"/>
+  <ellipse cx="500" cy="330" rx="105" ry="62" fill="#2563EB" fill-opacity="0.45"/>
+  <ellipse cx="560" cy="330" rx="110" ry="70" fill="#DC2626" fill-opacity="0.45"/>
+  <ellipse cx="560" cy="330" rx="72" ry="45" fill="#EF4444" fill-opacity="0.6"/>
+
+  <!-- Spectral Doppler waveform -->
+  <path d="M660 450L700 450L720 390L740 450L760 340L780 450L800 300L820 450L840 360L860 450L900 450"
+        stroke="#22D3EE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M660 450H900" stroke="#67E8F9" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- UI bars -->
+  <rect x="270" y="200" width="150" height="10" rx="5" fill="#A78BFA"/>
+  <rect x="270" y="220" width="100" height="8" rx="4" fill="#C4B5FD"/>
+  <rect x="270" y="550" width="660" height="14" rx="7" fill="#E9D5FF"/>
+
+  <circle cx="230" cy="700" r="34" fill="#A78BFA" fill-opacity="0.3"/>
+  <circle cx="990" cy="120" r="26" fill="#8B5CF6" fill-opacity="0.25"/>
+</svg>

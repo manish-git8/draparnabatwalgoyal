@@ -4,23 +4,36 @@
       <stop offset="0" stop-color="#F5F3FF"/>
       <stop offset="1" stop-color="#DDD6FE"/>
     </linearGradient>
-    <linearGradient id="probe" x1="360" y1="230" x2="760" y2="450" gradientUnits="userSpaceOnUse">
+    <linearGradient id="probe" x1="690" y1="260" x2="1010" y2="350" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#8B5CF6"/>
       <stop offset="1" stop-color="#6D28D9"/>
     </linearGradient>
   </defs>
+
   <rect width="1200" height="800" fill="url(#bg)"/>
-  <rect x="120" y="120" width="560" height="420" rx="36" fill="#FFFFFF" fill-opacity="0.9" stroke="#C4B5FD" stroke-width="8"/>
-  <path d="M180 220H620" stroke="#C4B5FD" stroke-width="8" stroke-linecap="round"/>
-  <path d="M180 280H560" stroke="#DDD6FE" stroke-width="8" stroke-linecap="round"/>
-  <path d="M180 340H520" stroke="#DDD6FE" stroke-width="8" stroke-linecap="round"/>
-  <path d="M180 400H480" stroke="#DDD6FE" stroke-width="8" stroke-linecap="round"/>
-  <rect x="690" y="260" width="320" height="90" rx="20" transform="rotate(-18 690 260)" fill="url(#probe)"/>
-  <rect x="950" y="160" width="140" height="90" rx="20" transform="rotate(-18 950 160)" fill="#A78BFA"/>
-  <path d="M735 425L930 360" stroke="#5B21B6" stroke-width="8" stroke-linecap="round"/>
-  <circle cx="930" cy="360" r="18" fill="#7C3AED"/>
-  <circle cx="980" cy="520" r="80" fill="#8B5CF6" fill-opacity="0.18"/>
-  <path d="M950 520H1010" stroke="#7C3AED" stroke-width="12" stroke-linecap="round"/>
-  <path d="M980 490V550" stroke="#7C3AED" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="260" cy="620" r="42" fill="#A78BFA" fill-opacity="0.3"/>
+  <rect x="120" y="120" width="620" height="460" rx="34" fill="#FFFFFF" fill-opacity="0.92" stroke="#C4B5FD" stroke-width="8"/>
+  <rect x="180" y="180" width="500" height="340" rx="24" fill="#1F2937"/>
+
+  <!-- Ultrasound lesion target -->
+  <ellipse cx="410" cy="350" rx="130" ry="84" fill="#4B5563"/>
+  <ellipse cx="430" cy="350" rx="60" ry="40" fill="#9CA3AF"/>
+  <circle cx="430" cy="350" r="8" fill="#F9FAFB"/>
+
+  <!-- Guidance line and needle path -->
+  <path d="M700 400L430 350" stroke="#A78BFA" stroke-width="4" stroke-dasharray="10 10" stroke-linecap="round"/>
+  <path d="M760 386L446 352" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="446" cy="352" r="7" fill="#EF4444"/>
+
+  <!-- Probe -->
+  <rect x="700" y="260" width="320" height="96" rx="20" transform="rotate(-12 700 260)" fill="url(#probe)"/>
+  <rect x="960" y="176" width="142" height="92" rx="20" transform="rotate(-12 960 176)" fill="#A78BFA"/>
+
+  <!-- UI strips -->
+  <rect x="205" y="205" width="140" height="10" rx="5" fill="#A78BFA"/>
+  <rect x="205" y="225" width="92" height="8" rx="4" fill="#C4B5FD"/>
+  <rect x="205" y="535" width="470" height="12" rx="6" fill="#E9D5FF"/>
+
+  <circle cx="1000" cy="540" r="78" fill="#8B5CF6" fill-opacity="0.16"/>
+  <path d="M970 540H1030" stroke="#7C3AED" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1000 510V570" stroke="#7C3AED" stroke-width="12" stroke-linecap="round"/>
 </svg>

@@ -46,6 +46,29 @@ export const services = [
     ]
   },
   {
+    slug: 'doppler-study',
+    title: 'Color Doppler Study',
+    shortDesc: 'Arterial and venous Doppler studies for blood-flow assessment in peripheral, carotid, abdominal, and obstetric vascular indications.',
+    icon: '🫀',
+    image: '/images/service-doppler.svg',
+    overview: 'Color Doppler ultrasound evaluates blood flow direction, velocity, and vessel patency in real time. It is commonly used for arterial insufficiency, venous thrombosis, carotid screening, abdominal vascular evaluation, and pregnancy-related Doppler assessment.',
+    benefits: [
+      'Non-invasive vascular flow assessment',
+      'Helps detect narrowing, blockage, or clots',
+      'Useful for DVT, varicose, and limb pain workup',
+      'Supports carotid and abdominal vascular screening',
+      'Obstetric Doppler for fetal and placental circulation',
+      'Immediate image-based clinical guidance'
+    ],
+    procedure: 'A focused ultrasound probe is placed over target vessels with color and spectral Doppler modes to measure flow pattern and velocity. Depending on indication, bilateral limb, neck, abdominal, or obstetric vessels are examined and documented in a structured report.',
+    whyChoose: 'Dr. Aparna provides high-quality Doppler interpretation using advanced ultrasound modes for accurate vascular diagnosis. At SNG Hospital, each Doppler study is protocol-based and clinically correlated to support timely treatment planning.',
+    faqs: [
+      { q: 'What is the difference between USG and Doppler?', a: 'Routine USG shows organ structure, while Doppler adds blood-flow information such as speed and direction inside vessels.' },
+      { q: 'Do I need fasting for Doppler study?', a: 'Some abdominal Doppler studies may require fasting, while limb and carotid Doppler usually do not. You will receive test-specific instructions while booking.' },
+      { q: 'How long does a Doppler scan take?', a: 'Most Doppler studies are completed in about 20-40 minutes, depending on the vascular territory being assessed.' }
+    ]
+  },
+  {
     slug: 'ct-scan',
     title: 'CT Scan',
     shortDesc: 'Advanced computed tomography scanning for detailed cross-sectional imaging and accurate diagnosis.',
