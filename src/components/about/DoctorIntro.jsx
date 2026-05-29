@@ -65,7 +65,7 @@ export default function DoctorIntro() {
               </p>
 
               <p className="text-gray-600 leading-relaxed mb-8">
-                Dr. Aparna completed her undergraduate medical education (MBBS) at one of India's most prestigious government medical institutions, the historic <strong>Seth GS Medical College & KEM Hospital, Mumbai</strong>. She went on to complete her postgraduate Doctor of Medicine (MD) in Radio-Diagnosis at <strong>Dr. D.Y. Patil Medical College, Pune</strong>. She further honed her oncology diagnostic expertise through a clinical residency at the world-renowned <strong>Tata Memorial Hospital, Mumbai</strong> and has worked extensively at <strong>Bombay Hospital, Indore</strong>.
+                Dr. Aparna completed her undergraduate medical education (MBBS) at one of India&apos;s most prestigious government medical institutions, the historic <strong>Seth GS Medical College & KEM Hospital, Mumbai</strong>. She went on to complete her postgraduate Doctor of Medicine (MD) in Radio-Diagnosis at <strong>Dr. D.Y. Patil Medical College, Pune</strong>. She further honed her oncology diagnostic expertise through a clinical residency at the world-renowned <strong>Tata Memorial Hospital, Mumbai</strong> and has worked extensively at <strong>Bombay Hospital, Indore</strong>.
               </p>
 
               {/* Specializations Grid */}
@@ -91,9 +91,9 @@ export default function DoctorIntro() {
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">Philosophy of Care</h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    "Diagnostics is not just about identifying a condition on a screen, but about 
-                    understanding the person behind the scan. Every report is written with the utmost 
-                    care, knowing a patient's life and treatment depend on its accuracy."
+                    &ldquo;Diagnostics is not just about identifying a condition on a screen, but about
+                    understanding the person behind the scan. Every report is written with the utmost
+                    care, knowing a patient&apos;s life and treatment depend on its accuracy.&rdquo;
                   </p>
                 </div>
               </div>
