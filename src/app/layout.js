@@ -42,13 +42,12 @@ export const metadata = {
   authors: [{ name: "Dr. Aparna" }],
   icons: {
     icon: [
-      { url: SITE_ICONS.favicon, sizes: "any" },
       { url: SITE_ICONS.favicon32, type: "image/png", sizes: "32x32" },
       { url: SITE_ICONS.favicon16, type: "image/png", sizes: "16x16" },
       { url: SITE_LOGO, type: "image/png", sizes: "512x512" },
     ],
     apple: [{ url: SITE_ICONS.apple, sizes: "180x180", type: "image/png" }],
-    shortcut: [SITE_ICONS.favicon],
+    shortcut: [SITE_ICONS.favicon32],
   },
   openGraph: {
     type: "website",
@@ -141,11 +140,11 @@ export default function RootLayout({ children }) {
       className={`${outfit.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
-        <link rel="icon" href={SITE_ICONS.favicon} sizes="any" />
         <link rel="icon" href={SITE_ICONS.favicon32} type="image/png" sizes="32x32" />
         <link rel="icon" href={SITE_ICONS.favicon16} type="image/png" sizes="16x16" />
+        <link rel="icon" href={SITE_LOGO} type="image/png" sizes="512x512" />
         <link rel="apple-touch-icon" href={SITE_ICONS.apple} sizes="180x180" />
-        <link rel="shortcut icon" href={SITE_ICONS.favicon} />
+        <link rel="shortcut icon" href={SITE_ICONS.favicon32} type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
