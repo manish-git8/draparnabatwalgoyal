@@ -33,10 +33,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 In Cloudflare project **Settings → Build**, use:
 
+- **Build command:** `npm run build`
+- **Deploy command:** `npm run deploy:cloudflare`
+
+Alternative (also valid):
+
 - **Build command:** `npm run build:cloudflare`
 - **Deploy command:** `npm run deploy:cloudflare`
 
-Do **not** use `npm run build` + `npx wrangler deploy`.  
-`next build` alone does not create the OpenNext bundle (`.open-next`) required for deploy.
+Do **not** use `npx wrangler deploy` alone after `next build`.
 
 Worker name and self-binding are configured in `wrangler.jsonc` as `draparnabatwalgoyal`.
