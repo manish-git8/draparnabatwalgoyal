@@ -50,25 +50,26 @@ export default function Navbar() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-11 h-11 rounded-xl overflow-hidden shadow-lg shadow-lavender-500/30 group-hover:shadow-lavender-500/50 transition-shadow">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group min-w-0 max-w-[58%] sm:max-w-none">
+              <span className="relative flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-lavender-100/80">
                 <Image
-                  src="/dr-aparna-logo.svg"
-                  alt="Dr. Aparna logo"
-                  width={44}
-                  height={44}
-                  className="w-full h-full object-cover"
+                  src="/dr-aparna-logo.png"
+                  alt=""
+                  width={96}
+                  height={96}
+                  className="absolute left-1/2 top-0 h-[148%] w-[148%] max-w-none -translate-x-1/2 object-cover object-top"
                   priority
+                  aria-hidden
                 />
-              </div>
-              <div>
-                <span className="text-lg font-bold text-gray-900 font-[var(--font-heading)]">
-                  Dr. Aparna
+              </span>
+              <span className="min-w-0 block">
+                <span className="block text-sm sm:text-base md:text-lg font-bold text-gray-900 leading-tight truncate">
+                  Dr. Aparna Goyal
                 </span>
-                <span className="block text-[11px] text-lavender-600 font-medium -mt-1 tracking-wide">
-                  SENIOR RADIOLOGIST
+                <span className="block text-[10px] sm:text-xs text-lavender-600 font-medium tracking-wide mt-0.5 truncate">
+                  Senior Radiologist
                 </span>
-              </div>
+              </span>
             </Link>
 
             {/* Desktop Nav */}

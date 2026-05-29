@@ -40,8 +40,12 @@ export const metadata = {
   ],
   authors: [{ name: "Dr. Aparna" }],
   icons: {
-    icon: [{ url: "/dr-aparna-logo.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/dr-aparna-logo.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/dr-aparna-logo.png", type: "image/png", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/dr-aparna-logo.png", type: "image/png" }],
+    shortcut: ["/dr-aparna-logo.png"],
   },
   openGraph: {
     type: "website",
@@ -71,6 +75,12 @@ export const metadata = {
     index: true,
     follow: true,
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }) {
@@ -128,6 +138,9 @@ export default function RootLayout({ children }) {
       className={`${outfit.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
+        <link rel="icon" href="/dr-aparna-logo.png" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/dr-aparna-logo.png" />
+        <link rel="shortcut icon" href="/dr-aparna-logo.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -14,7 +14,7 @@ const certificates = [
     issuer: 'Dr. D.Y. Patil Vidyapeeth (Deemed University), Pune',
     year: '2016',
     badge: 'MD Radiodiagnosis',
-    image: '/images/2b18b280-c6b7-4ce0-a1d5-1347e52fb480.jpg',
+    image: '/images/about/md-degree.jpg',
     description: 'Postgraduate Doctor of Medicine in Radio-Diagnosis degree certificate, conferred in May 2016.'
   },
   {
@@ -23,7 +23,7 @@ const certificates = [
     issuer: 'Seth GS Medical College & KEM Hospital, Mumbai (MUHS)',
     year: '2010',
     badge: 'MBBS Degree',
-    image: '/images/fec222b1-4aa0-4bd9-b0ab-e9cbdb92578f.jpg',
+    image: '/images/about/mbbs-degree.jpg',
     description: 'Undergraduate medical degree from the prestigious Seth Gordhandas Sunderdas Medical College & KEM Hospital, Mumbai.'
   },
   {
@@ -32,7 +32,7 @@ const certificates = [
     issuer: 'ScholarMD Edvent (Continuing Medical Education)',
     year: '2025-2026',
     badge: 'Fetal Medicine',
-    image: '/images/126c4452-4649-486a-b2df-106d79cc73f3.jpg',
+    image: '/images/about/fetal-medicine.jpg',
     description: 'Certificate for completing the comprehensive structured Fetal Medicine Training Programme (ScholarMD Edvent).'
   },
   {
@@ -41,7 +41,7 @@ const certificates = [
     issuer: 'Tata Memorial Hospital, Mumbai (Tata Memorial Centre)',
     year: '2016',
     badge: 'Oncology Imaging',
-    image: '/images/40695ed2-50ae-42ae-bef0-7b5c8715a33e.jpg',
+    image: '/images/about/tata-memorial.jpg',
     description: 'Specialized clinical observership and training in the Department of Radio-Diagnosis at India\'s premier cancer research institute.'
   },
   {
@@ -50,7 +50,7 @@ const certificates = [
     issuer: 'Bombay Hospital, Indore (NABH Accredited)',
     year: '2017-2018',
     badge: 'Experience Track',
-    image: '/images/3a279660-cc77-446a-8daf-1dbe2929a6c1.jpg',
+    image: '/images/about/bombay-hospital.jpg',
     description: 'Experience certificate as Clinical Associate in the Department of Radiodiagnosis (CT, MRI, X-Ray, USG).'
   },
   {
@@ -59,8 +59,8 @@ const certificates = [
     issuer: 'Madhya Pradesh Medical Council, Bhopal',
     year: '2017',
     badge: 'Postgraduate Reg',
-    image: '/images/13bd4664-6594-4ac9-ba34-01628126bb95.jpg',
-    description: 'Additional medical registration certificate certifying the MD (Radiodiagnosis) qualification permanently against MP-21441.'
+    image: '/images/about/md-registration.jpg',
+    description: 'Additional medical registration certificate certifying the MD (Radiodiagnosis) qualification with the Madhya Pradesh Medical Council.'
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const certificates = [
     issuer: 'Madhya Pradesh Medical Council',
     year: '2017',
     badge: 'Medical Registration',
-    image: '/images/4bba806b-48df-421e-9cb9-93499f7ceaa4.jpg',
+    image: '/images/about/mbbs-registration.jpg',
     description: 'Official reciprocal permanent medical registration certificate for the undergraduate qualification.'
   },
   {
@@ -77,9 +77,18 @@ const certificates = [
     issuer: 'Bombay Hospital, Indore (NABH Accredited)',
     year: '2018',
     badge: 'Experience Letter',
-    image: '/images/4e2582ca-3c48-4f9b-bc05-cc1059a34c88.jpg',
+    image: '/images/about/bombay-hospital.jpg',
     description: 'Framed official experience certificate from Bombay Hospital, Indore — a 600-bed multi-specialty tertiary care NABH accredited hospital.'
-  }
+  },
+  {
+    id: 9,
+    title: 'MSK Imaging Observership Certificate',
+    issuer: 'N M Medical Centre, Sancheti Hospital Campus, Pune',
+    year: '2017',
+    badge: 'MSK Radiology',
+    image: '/images/about/msk-observership.jpg',
+    description: 'Observership in musculoskeletal imaging (cross-sectional and ultrasound) with emphasis on joint, spine, and neurography reporting.'
+  },
 ];
 
 export default function CertificatesGallery() {
@@ -106,7 +115,7 @@ export default function CertificatesGallery() {
           description="Click on any certificate to view the verified credential in detail."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
           {certificates.map((cert) => (
             <motion.div
               key={cert.id}
@@ -124,12 +133,12 @@ export default function CertificatesGallery() {
                     src={cert.image}
                     alt={cert.title}
                     fill
-                    className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                    className="object-contain p-1 group-hover:scale-[1.03] transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-lavender-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="bg-white/95 backdrop-blur-sm text-xs font-bold text-lavender-700 px-3 py-1.5 rounded-full shadow-md flex items-center gap-1">
-                      Enlarge <FiMaximize2 className="w-3.5 h-3.5" />
+                  <div className="absolute inset-0 bg-lavender-900/10 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="bg-white/95 backdrop-blur-sm text-[11px] sm:text-xs font-bold text-lavender-700 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full shadow-md flex items-center gap-1">
+                      Tap to view <FiMaximize2 className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </div>
@@ -153,10 +162,10 @@ export default function CertificatesGallery() {
                     )}
                   </div>
                   
-                  <div className="flex items-center justify-between mt-5 pt-3 border-t border-gray-100">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mt-5 pt-3 border-t border-gray-100">
                     <span className="text-xs font-bold text-gray-400">Year: {cert.year}</span>
-                    <span className="inline-flex items-center gap-1 text-xs font-bold text-lavender-600 group-hover:underline">
-                      View Verified Credential <FiMaximize2 className="w-3" />
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-lavender-600 sm:group-hover:underline">
+                      View credential <FiMaximize2 className="w-3 shrink-0" />
                     </span>
                   </div>
                 </div>

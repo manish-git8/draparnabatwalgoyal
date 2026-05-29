@@ -48,21 +48,22 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             {/* Brand Column */}
             <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl overflow-hidden">
+              <Link href="/" className="inline-flex items-center gap-2.5 mb-5 rounded-lg bg-white p-2 shadow-md hover:shadow-lg transition-shadow">
+                <span className="relative block h-11 w-11 shrink-0 overflow-hidden rounded-md">
                   <Image
-                    src="/dr-aparna-logo.svg"
-                    alt="Dr. Aparna logo"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover"
+                    src="/dr-aparna-logo.png"
+                    alt=""
+                    width={88}
+                    height={88}
+                    className="absolute left-1/2 top-0 h-[148%] w-[148%] max-w-none -translate-x-1/2 object-cover object-top"
+                    aria-hidden
                   />
-                </div>
-                <div>
-                  <span className="text-lg font-bold text-white">Dr. Aparna</span>
-                  <span className="block text-[11px] text-lavender-300 font-medium -mt-1">SENIOR RADIOLOGIST</span>
-                </div>
-              </div>
+                </span>
+                <span className="pr-1">
+                  <span className="block text-sm font-bold text-gray-900 leading-tight">Dr. Aparna Goyal</span>
+                  <span className="block text-[10px] text-lavender-600 font-medium">Senior Radiologist</span>
+                </span>
+              </Link>
               <p className="text-lavender-100/70 text-sm leading-relaxed mb-6">
                 Advanced radiology and diagnostic care with precision and compassion. 
                 Specialist in Diagnostic Radiology with 10+ years of experience at SNG Hospital, Indore.

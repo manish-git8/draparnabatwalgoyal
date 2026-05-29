@@ -6,19 +6,19 @@ import { FiAward, FiCheckCircle, FiHeart, FiStar } from 'react-icons/fi';
 
 export default function DoctorIntro() {
   return (
-    <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-white to-lavender-bg">
+    <section className="relative overflow-hidden py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-white to-lavender-bg">
       <div className="absolute inset-0 dot-pattern opacity-20" />
       <div className="absolute top-1/4 left-10 w-72 h-72 bg-lavender-200/30 rounded-full blur-[80px] -z-10" />
       
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image Column */}
-          <div className="lg:col-span-5 flex justify-center">
+          <div className="lg:col-span-5 flex justify-center w-full max-w-sm mx-auto lg:max-w-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full max-w-md aspect-[5/6] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white shadow-lavender-500/10"
+              className="relative w-full aspect-[5/6] rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-2 sm:border-4 border-white shadow-lavender-500/10"
             >
               <Image
                 src="/doctor-profile.jpg"
@@ -31,9 +31,9 @@ export default function DoctorIntro() {
               <div className="absolute inset-0 bg-gradient-to-t from-lavender-900/40 via-transparent to-transparent" />
               
               {/* Overlay info */}
-              <div className="absolute bottom-6 left-6 right-6 glass p-5 rounded-2xl">
-                <div className="text-white font-bold text-lg leading-tight">Dr. Aparna Bhatwal Goyal</div>
-                <div className="text-lavender-200 text-sm font-medium mt-1">Senior Radiologist • SNG Hospital</div>
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 glass p-3 sm:p-5 rounded-xl sm:rounded-2xl">
+                <div className="text-white font-bold text-base sm:text-lg leading-tight">Dr. Aparna Bhatwal Goyal</div>
+                <div className="text-lavender-200 text-xs sm:text-sm font-medium mt-1">Senior Radiologist • SNG Hospital</div>
               </div>
             </motion.div>
           </div>
@@ -48,7 +48,7 @@ export default function DoctorIntro() {
               <span className="text-sm font-bold tracking-wider text-lavender-600 uppercase block mb-3">
                 MEET THE DOCTOR
               </span>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
                 Dr. Aparna Bhatwal Goyal
                 <span className="text-lavender-600 block text-xl md:text-2xl font-bold mt-2">
                   MBBS, MD (Radio-Diagnosis)
@@ -76,7 +76,7 @@ export default function DoctorIntro() {
                   'Oncology Diagnostic Training at Tata Memorial, Mumbai',
                   'Fetal Medicine Training from ScholarMD Edvent',
                   'Clinical Associate Track at Bombay Hospital, Indore',
-                  'Registered with MP Medical Council (No. MP-21441)',
+                  'Registered with Madhya Pradesh Medical Council',
                 ].map((spec, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <FiCheckCircle className="w-5 h-5 text-lavender-500 shrink-0 mt-0.5" />
