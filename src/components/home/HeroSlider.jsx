@@ -252,7 +252,7 @@ export default function HeroSlider() {
                     src={slide.image}
                     alt={slide.imageAlt}
                     fill
-                    priority
+                    priority={current === 0}
                     className={`object-cover ${slide.type === 'intro' ? 'object-top' : 'object-center'}`}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
