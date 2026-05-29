@@ -1,8 +1,8 @@
 # Dr. Aparna Batwal Goyal — Website
 
-Next.js static site for Dr. Aparna Batwal Goyal (radiology practice).
+Static Next.js site for Dr. Aparna Batwal Goyal (Senior Radiologist, SNG Hospital Indore).
 
-## Local development
+## Quick start
 
 ```bash
 npm install
@@ -17,16 +17,27 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 ```
 
-Static files are written to `out/`.
+Output folder: `out/` (upload this to Cloudflare Pages).
 
-## Deploy (Cloudflare Pages)
+## Deploy to Cloudflare Pages
 
-See [DEPLOY.md](./DEPLOY.md). Summary:
+| Setting | Value |
+|--------|--------|
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Build output directory | `out` |
 
-- **Build command:** `npm run build`
-- **Output directory:** `out`
+See [DEPLOY.md](./DEPLOY.md) for details.
+
+Optional CLI deploy (after `npx wrangler login`):
 
 ```bash
-npx wrangler login
 npm run pages:deploy
 ```
+
+## Project structure
+
+- `src/app/` — pages and layout
+- `src/components/` — UI components
+- `src/data/` — services, FAQs, blogs, reviews, doctor gallery
+- `public/` — images, logo, static assets (served in production)

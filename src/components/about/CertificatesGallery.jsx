@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Lightbox from '@/components/ui/Lightbox';
-import { FiAward, FiMaximize2 } from 'react-icons/fi';
+import { FiMaximize2 } from 'react-icons/fi';
 
 const certificates = [
   {
@@ -73,15 +73,6 @@ const certificates = [
   },
   {
     id: 8,
-    title: 'Bombay Hospital Experience Letter (Framed)',
-    issuer: 'Bombay Hospital, Indore (NABH Accredited)',
-    year: '2018',
-    badge: 'Experience Letter',
-    image: '/images/about/bombay-hospital.jpg',
-    description: 'Framed official experience certificate from Bombay Hospital, Indore — a 600-bed multi-specialty tertiary care NABH accredited hospital.'
-  },
-  {
-    id: 9,
     title: 'MSK Imaging Observership Certificate',
     issuer: 'N M Medical Centre, Sancheti Hospital Campus, Pune',
     year: '2017',

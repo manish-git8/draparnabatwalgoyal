@@ -40,12 +40,8 @@ export const metadata = {
   ],
   authors: [{ name: "Dr. Aparna" }],
   icons: {
-    icon: [
-      { url: "/dr-aparna-logo.png", type: "image/png", sizes: "any" },
-      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
-    ],
+    icon: [{ url: "/dr-aparna-logo.png", type: "image/png", sizes: "any" }],
     apple: [{ url: "/dr-aparna-logo.png", type: "image/png" }],
-    shortcut: ["/dr-aparna-logo.png"],
   },
   openGraph: {
     type: "website",

@@ -11,7 +11,7 @@ const getServiceImage = (slug) => {
   if (slug === 'ct-scan') return '/images/slider-ct-scan.png';
   if (slug === 'usg-ultrasound') return '/images/slider-usg.png';
   if (slug === 'usg-guided-procedures') return '/images/13bd4664-6594-4ac9-ba34-01628126bb95.jpg';
-  if (slug === 'doppler-study') return '/images/2b18b280-c6b7-4ce0-a1d5-1347e52fb480.jpg';
+  if (slug === 'doppler-study') return '/images/service-doppler.svg';
   if (slug === 'fetal-medicine-imaging') return '/images/slider-fetal-medicine.png';
   if (slug === 'oncology-imaging') return '/images/service-oncology.svg';
   if (slug === 'diagnostic-consultation') return '/images/service-consultation.svg';

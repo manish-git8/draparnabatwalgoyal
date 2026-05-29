@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FiAward, FiCheckCircle, FiHeart, FiStar } from 'react-icons/fi';
+import { FiCheckCircle, FiHeart } from 'react-icons/fi';
 
 export default function DoctorIntro() {
   return (
