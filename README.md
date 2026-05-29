@@ -29,8 +29,14 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Cloudflare Workers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In Cloudflare project **Settings → Build**, use:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Build command:** `npm run build:cloudflare`
+- **Deploy command:** `npm run deploy:cloudflare`
+
+Do **not** use `npm run build` + `npx wrangler deploy`.  
+`next build` alone does not create the OpenNext bundle (`.open-next`) required for deploy.
+
+Worker name and self-binding are configured in `wrangler.jsonc` as `draparnabatwalgoyal`.
