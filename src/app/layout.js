@@ -39,6 +39,10 @@ export const metadata = {
     "ultrasound specialist Indore",
   ],
   authors: [{ name: "Dr. Aparna" }],
+  icons: {
+    icon: [{ url: "/dr-aparna-logo.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/dr-aparna-logo.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -124,7 +128,6 @@ export default function RootLayout({ children }) {
       className={`${outfit.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
