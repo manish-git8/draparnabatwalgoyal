@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiPhone, FiCalendar } from 'react-icons/fi';
+import { SITE_LOGO, SITE_LOGO_ALT } from '@/lib/site';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -53,7 +54,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group min-w-0 max-w-[58%] sm:max-w-none">
               <span className="relative flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-lavender-100/80">
                 <Image
-                  src="/dr-aparna-logo.png"
+                  src={SITE_LOGO}
                   alt=""
                   width={96}
                   height={96}

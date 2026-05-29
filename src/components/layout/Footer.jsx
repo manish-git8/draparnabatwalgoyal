@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FiPhone, FiMail, FiMapPin, FiClock, FiArrowRight } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { SITE_LOGO, SITE_LOGO_ALT } from '@/lib/site';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -51,8 +52,8 @@ export default function Footer() {
               <Link href="/" className="inline-flex items-center gap-2.5 mb-5 rounded-lg bg-white p-2 shadow-md hover:shadow-lg transition-shadow">
                 <span className="relative block h-11 w-11 shrink-0 overflow-hidden rounded-md">
                   <Image
-                    src="/dr-aparna-logo.png"
-                    alt=""
+                    src={SITE_LOGO}
+                    alt={SITE_LOGO_ALT}
                     width={88}
                     height={88}
                     className="absolute left-1/2 top-0 h-[148%] w-[148%] max-w-none -translate-x-1/2 object-cover object-top"

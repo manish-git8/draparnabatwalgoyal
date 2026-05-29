@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingWidgets from "@/components/layout/FloatingWidgets";
+import { SITE_ICONS, SITE_LOGO } from "@/lib/site";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -40,8 +41,14 @@ export const metadata = {
   ],
   authors: [{ name: "Dr. Aparna" }],
   icons: {
-    icon: [{ url: "/dr-aparna-logo.png", type: "image/png", sizes: "any" }],
-    apple: [{ url: "/dr-aparna-logo.png", type: "image/png" }],
+    icon: [
+      { url: SITE_ICONS.favicon, sizes: "any" },
+      { url: SITE_ICONS.favicon32, type: "image/png", sizes: "32x32" },
+      { url: SITE_ICONS.favicon16, type: "image/png", sizes: "16x16" },
+      { url: SITE_LOGO, type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: SITE_ICONS.apple, sizes: "180x180", type: "image/png" }],
+    shortcut: [SITE_ICONS.favicon],
   },
   openGraph: {
     type: "website",
@@ -53,7 +60,7 @@ export const metadata = {
       "Advanced radiology and diagnostic care with precision and compassion. Specialist with 10+ years of experience.",
     images: [
       {
-        url: "/doctor-profile.jpg",
+        url: SITE_LOGO,
         width: 800,
         height: 600,
         alt: "Dr. Aparna — Senior Radiologist",
@@ -65,7 +72,7 @@ export const metadata = {
     title: "Dr. Aparna | Senior Radiologist in Indore",
     description:
       "Advanced radiology and diagnostic care with precision and compassion.",
-    images: ["/doctor-profile.jpg"],
+    images: [SITE_LOGO],
   },
   robots: {
     index: true,
@@ -89,7 +96,7 @@ export default function RootLayout({ children }) {
     url: "https://draparna.in",
     telephone: "+917879803842",
     email: "contact@snghospital.com",
-    image: "/doctor-profile.jpg",
+    image: SITE_LOGO,
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -134,9 +141,11 @@ export default function RootLayout({ children }) {
       className={`${outfit.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
-        <link rel="icon" href="/dr-aparna-logo.png" type="image/png" sizes="any" />
-        <link rel="apple-touch-icon" href="/dr-aparna-logo.png" />
-        <link rel="shortcut icon" href="/dr-aparna-logo.png" type="image/png" />
+        <link rel="icon" href={SITE_ICONS.favicon} sizes="any" />
+        <link rel="icon" href={SITE_ICONS.favicon32} type="image/png" sizes="32x32" />
+        <link rel="icon" href={SITE_ICONS.favicon16} type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href={SITE_ICONS.apple} sizes="180x180" />
+        <link rel="shortcut icon" href={SITE_ICONS.favicon} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
