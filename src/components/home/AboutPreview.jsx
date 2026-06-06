@@ -2,11 +2,11 @@
 
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import SectionHeading from '@/components/ui/SectionHeading';
-import Lightbox from '@/components/ui/Lightbox';
-import { doctorGalleryImages } from '@/data/doctorGallery';
+import CertificateCardVisual from '@/components/ui/CertificateCardVisual';
+import CredentialDetailModal from '@/components/ui/CredentialDetailModal';
+import { certificates } from '@/data/certificates';
 import {
   FiArrowRight,
   FiCheckCircle,
@@ -17,8 +17,8 @@ import {
 
 export default function AboutPreview() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const total = doctorGalleryImages.length;
+  const [modalOpen, setModalOpen] = useState(false);
+  const total = certificates.length;
 
   const highlights = [
     'MBBS — Seth GS Medical College & KEM Hospital, Mumbai',
@@ -27,7 +27,7 @@ export default function AboutPreview() {
     'Fetal Medicine Training — ScholarMD Edvent',
   ];
 
-  const active = doctorGalleryImages[activeIndex];
+  const active = certificates[activeIndex];
 
   const goPrev = useCallback(() => {
     setActiveIndex((i) => (i - 1 + total) % total);
@@ -37,9 +37,9 @@ export default function AboutPreview() {
     setActiveIndex((i) => (i + 1) % total);
   }, [total]);
 
-  const openLightbox = (index) => {
+  const openModal = (index) => {
     setActiveIndex(index);
-    setLightboxOpen(true);
+    setModalOpen(true);
   };
 
   return (
@@ -47,7 +47,6 @@ export default function AboutPreview() {
       <div className="absolute top-0 right-0 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] bg-lavender-100/50 rounded-full blur-[80px]" />
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start lg:items-center">
-          {/* Credentials gallery — below text on mobile for readability */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,34 +57,33 @@ export default function AboutPreview() {
             <div className="relative w-full max-w-lg mx-auto px-0 sm:px-2">
               <div className="hidden sm:block absolute -top-4 -left-4 w-full h-full bg-lavender-100 rounded-3xl" />
 
-              {/* Main certificate viewer */}
               <div className="relative">
                 <button
                   type="button"
                   onClick={goPrev}
                   className="absolute left-1 top-1/2 z-10 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-gray-700 shadow-md ring-1 ring-lavender-100 hover:bg-lavender-50 sm:left-2 sm:h-10 sm:w-10"
-                  aria-label="Previous certificate"
+                  aria-label="Previous credential"
                 >
                   <FiChevronLeft className="h-5 w-5" />
                 </button>
 
                 <button
                   type="button"
-                  onClick={() => openLightbox(activeIndex)}
-                  className="relative mx-8 sm:mx-10 block w-[calc(100%-4rem)] sm:w-[calc(100%-5rem)] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl bg-gray-50 aspect-[4/3] ring-1 ring-lavender-100 group cursor-zoom-in touch-manipulation"
-                  aria-label={`View ${active.title} certificate full screen`}
+                  onClick={() => openModal(activeIndex)}
+                  className="relative mx-8 sm:mx-10 block w-[calc(100%-4rem)] sm:w-[calc(100%-5rem)] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl ring-1 ring-lavender-100 group cursor-pointer touch-manipulation"
+                  aria-label={`View ${active.shortTitle} credential details`}
                 >
-                  <Image
-                    src={active.src}
-                    alt={active.alt}
-                    fill
-                    className="object-contain p-2 sm:p-3 transition-transform duration-500 group-active:scale-[1.01]"
-                    sizes="(max-width: 1024px) 100vw, 480px"
-                    priority
+                  <CertificateCardVisual
+                    icon={active.icon}
+                    gradient={active.gradient}
+                    badge={active.badge}
+                    title={active.shortTitle}
+                    size="lg"
+                    className="aspect-[4/3] min-h-[220px] group-active:scale-[1.01] transition-transform duration-500"
                   />
                   <span className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 flex items-center gap-1.5 rounded-lg bg-white/95 px-2 py-1 sm:px-2.5 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 shadow-md">
                     <FiMaximize2 className="w-3.5 h-3.5" />
-                    Tap to enlarge
+                    Tap for details
                   </span>
                 </button>
 
@@ -93,48 +91,44 @@ export default function AboutPreview() {
                   type="button"
                   onClick={goNext}
                   className="absolute right-1 top-1/2 z-10 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-gray-700 shadow-md ring-1 ring-lavender-100 hover:bg-lavender-50 sm:right-2 sm:h-10 sm:w-10"
-                  aria-label="Next certificate"
+                  aria-label="Next credential"
                 >
                   <FiChevronRight className="h-5 w-5" />
                 </button>
               </div>
 
               <p className="mt-3 text-center text-sm font-semibold text-lavender-700 px-2">
-                {active.title}
+                {active.shortTitle}
               </p>
               <p className="text-center text-xs text-gray-400 mt-1 lg:hidden">
                 Swipe thumbnails or use arrows
               </p>
 
-              {/* Thumbnails — horizontal scroll on mobile, grid on desktop */}
               <div
                 className="mt-4 flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 snap-x snap-mandatory scrollbar-thin lg:grid lg:grid-cols-4 lg:overflow-visible lg:pb-0 lg:mx-0 lg:px-0 lg:gap-2.5"
                 role="tablist"
-                aria-label="Certificate thumbnails"
+                aria-label="Credential thumbnails"
               >
-                {doctorGalleryImages.map((img, i) => (
-                  <button
-                    key={img.src}
-                    type="button"
-                    role="tab"
-                    onClick={() => setActiveIndex(i)}
-                    className={`relative shrink-0 snap-center w-[4.75rem] sm:w-20 lg:w-auto aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 ring-2 transition-all touch-manipulation ${
-                      i === activeIndex
-                        ? 'ring-lavender-500 shadow-md'
-                        : 'ring-transparent opacity-75 hover:opacity-100 hover:ring-lavender-200'
-                    }`}
-                    aria-label={`Show ${img.title}`}
-                    aria-selected={i === activeIndex}
-                  >
-                    <Image
-                      src={img.src}
-                      alt=""
-                      fill
-                      className="object-contain p-0.5"
-                      sizes="(max-width: 1024px) 72px, 120px"
-                    />
-                  </button>
-                ))}
+                {certificates.map((cert, i) => {
+                  const Icon = cert.icon;
+                  return (
+                    <button
+                      key={cert.id}
+                      type="button"
+                      role="tab"
+                      onClick={() => setActiveIndex(i)}
+                      className={`relative shrink-0 snap-center w-[4.75rem] sm:w-20 lg:w-auto aspect-[4/3] rounded-lg overflow-hidden ring-2 transition-all touch-manipulation bg-gradient-to-br ${cert.gradient} flex items-center justify-center ${
+                        i === activeIndex
+                          ? 'ring-lavender-500 shadow-md'
+                          : 'ring-transparent opacity-75 hover:opacity-100 hover:ring-lavender-200'
+                      }`}
+                      aria-label={`Show ${cert.shortTitle}`}
+                      aria-selected={i === activeIndex}
+                    >
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow" />
+                    </button>
+                  );
+                })}
               </div>
 
               <div className="mt-5 flex justify-center sm:mt-6 lg:absolute lg:-bottom-4 lg:right-0 lg:mt-0">
@@ -148,7 +142,6 @@ export default function AboutPreview() {
             </div>
           </motion.div>
 
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -201,11 +194,10 @@ export default function AboutPreview() {
         </div>
       </div>
 
-      <Lightbox
-        isOpen={lightboxOpen}
-        image={active?.src}
-        title={active?.title}
-        onClose={() => setLightboxOpen(false)}
+      <CredentialDetailModal
+        isOpen={modalOpen}
+        credential={active}
+        onClose={() => setModalOpen(false)}
         onPrev={total > 1 ? goPrev : undefined}
         onNext={total > 1 ? goNext : undefined}
       />
