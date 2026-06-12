@@ -26,7 +26,7 @@ export default function DoctorIntro() {
                 alt="Dr. Aparna Bhatwal Goyal"
                 fill
                 priority
-                className="object-cover object-[center_18%]"
+                className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 450px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-lavender-900/40 via-transparent to-transparent" />
