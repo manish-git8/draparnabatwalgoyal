@@ -44,12 +44,12 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="gradient-footer pt-16 pb-6">
+      <div className="gradient-footer pt-16 pb-6 border-t border-lavender-100">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             {/* Brand Column */}
             <div className="lg:col-span-1">
-              <Link href="/" className="inline-flex items-center gap-2.5 mb-5 rounded-lg bg-white p-2 shadow-md hover:shadow-lg transition-shadow">
+              <Link href="/" className="inline-flex items-center gap-2.5 mb-5 rounded-lg bg-white p-2 shadow-md hover:shadow-lg transition-shadow border border-lavender-100">
                 <span className="relative block h-11 w-11 shrink-0 overflow-hidden rounded-md">
                   <Image
                     src={SITE_LOGO}
@@ -65,7 +65,7 @@ export default function Footer() {
                   <span className="block text-[10px] text-lavender-600 font-medium">Senior Radiologist</span>
                 </span>
               </Link>
-              <p className="text-lavender-100/70 text-sm leading-relaxed mb-6">
+              <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Advanced radiology and diagnostic care with precision and compassion. 
                 Specialist in Diagnostic Radiology with 10+ years of experience at SNG Hospital, Indore.
               </p>
@@ -81,7 +81,7 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-9 h-9 rounded-lg bg-lavender-950/35 hover:bg-lavender-600 flex items-center justify-center text-lavender-200/70 hover:text-white transition-all duration-300"
+                    className="w-9 h-9 rounded-lg bg-white border border-lavender-100 hover:bg-lavender-500 flex items-center justify-center text-lavender-600 hover:text-white transition-all duration-300 shadow-sm"
                   >
                     <social.icon className="w-4 h-4" />
                   </a>
@@ -91,15 +91,15 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">Quick Links</h4>
+              <h4 className="text-gray-900 font-semibold text-sm uppercase tracking-wider mb-5">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-lavender-100/70 text-sm hover:text-lavender-300 transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-gray-600 text-sm hover:text-lavender-700 transition-colors duration-300 flex items-center gap-2 group"
                     >
-                      <FiArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                      <FiArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-lavender-600" />
                       {link.label}
                     </Link>
                   </li>
@@ -109,15 +109,15 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">Our Services</h4>
+              <h4 className="text-gray-900 font-semibold text-sm uppercase tracking-wider mb-5">Our Services</h4>
               <ul className="space-y-3">
                 {serviceLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-lavender-100/70 text-sm hover:text-lavender-300 transition-colors duration-300 flex items-center gap-2 group"
+                      className="text-gray-600 text-sm hover:text-lavender-700 transition-colors duration-300 flex items-center gap-2 group"
                     >
-                      <FiArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                      <FiArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-lavender-600" />
                       {link.label}
                     </Link>
                   </li>
@@ -127,29 +127,29 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">Contact Info</h4>
+              <h4 className="text-gray-900 font-semibold text-sm uppercase tracking-wider mb-5">Contact Info</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <FiMapPin className="w-4 h-4 text-lavender-400 mt-1 flex-shrink-0" />
-                  <span className="text-lavender-100/70 text-sm leading-relaxed">
+                  <FiMapPin className="w-4 h-4 text-lavender-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-600 text-sm leading-relaxed">
                     Navkar II Apartment, Banwari Lal Jaju Marg, Near Jain Temple, South Tukoganj, Indore, MP 452001
                   </span>
                 </li>
                 <li>
-                  <a href="tel:+917879803842" className="flex items-center gap-3 text-lavender-100/70 text-sm hover:text-lavender-300 transition-colors">
-                    <FiPhone className="w-4 h-4 text-lavender-400 flex-shrink-0" />
+                  <a href="tel:+917879803842" className="flex items-center gap-3 text-gray-600 text-sm hover:text-lavender-700 transition-colors">
+                    <FiPhone className="w-4 h-4 text-lavender-600 flex-shrink-0" />
                     +91 78798 03842
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:contact@snghospital.com" className="flex items-center gap-3 text-lavender-100/70 text-sm hover:text-lavender-300 transition-colors">
-                    <FiMail className="w-4 h-4 text-lavender-400 flex-shrink-0" />
+                  <a href="mailto:contact@snghospital.com" className="flex items-center gap-3 text-gray-600 text-sm hover:text-lavender-700 transition-colors">
+                    <FiMail className="w-4 h-4 text-lavender-600 flex-shrink-0" />
                     contact@snghospital.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FiClock className="w-4 h-4 text-lavender-400 flex-shrink-0" />
-                  <span className="text-lavender-100/70 text-sm">11:00 AM — 4:00 PM</span>
+                  <FiClock className="w-4 h-4 text-lavender-600 flex-shrink-0" />
+                  <span className="text-gray-600 text-sm">11:00 AM — 4:00 PM</span>
                 </li>
               </ul>
 
@@ -158,7 +158,7 @@ export default function Footer() {
                 href="https://wa.me/917879803842?text=Hello%20Dr.%20Aparna%2C%20I%20would%20like%20to%20book%20a%20consultation."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 flex items-center gap-2 px-4 py-2.5 bg-lavender-600/10 border border-lavender-600/20 rounded-xl text-lavender-300 text-sm font-medium hover:bg-lavender-600/20 transition-all"
+                className="mt-5 flex items-center gap-2 px-4 py-2.5 bg-white border border-lavender-200 rounded-xl text-lavender-700 text-sm font-medium hover:bg-lavender-50 hover:border-lavender-300 transition-all shadow-sm"
               >
                 <FaWhatsapp className="w-4 h-4" />
                 WhatsApp Consultation
@@ -167,17 +167,17 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="mt-12 pt-8 border-t border-lavender-300/15">
+          <div className="mt-12 pt-8 border-t border-lavender-200">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h4 className="text-white font-semibold mb-1">Subscribe to Health Newsletter</h4>
-                <p className="text-lavender-100/55 text-sm">Get health tips and updates delivered to your inbox.</p>
+                <h4 className="text-gray-900 font-semibold mb-1">Subscribe to Health Newsletter</h4>
+                <p className="text-gray-500 text-sm">Get health tips and updates delivered to your inbox.</p>
               </div>
               <div className="flex w-full md:w-auto gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 md:w-64 px-4 py-3 bg-lavender-950/35 border border-lavender-300/20 rounded-xl text-sm text-white placeholder-lavender-100/40 focus:outline-none focus:border-lavender-400 transition-colors"
+                  className="flex-1 md:w-64 px-4 py-3 bg-white border border-lavender-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-lavender-400 transition-colors shadow-sm"
                 />
                 <button className="px-6 py-3 gradient-primary rounded-xl text-white text-sm font-semibold hover:shadow-lg hover:shadow-lavender-500/25 transition-all">
                   Subscribe
@@ -187,13 +187,13 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="mt-8 pt-6 border-t border-lavender-300/15 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-lavender-100/50 text-xs">
+          <div className="mt-8 pt-6 border-t border-lavender-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-gray-500 text-xs">
               © {new Date().getFullYear()} Dr. Aparna — Senior Radiologist, SNG Hospital. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-lavender-100/50 text-xs hover:text-lavender-300 transition-colors">Privacy Policy</Link>
-              <Link href="#" className="text-lavender-100/50 text-xs hover:text-lavender-300 transition-colors">Terms of Service</Link>
+              <Link href="#" className="text-gray-500 text-xs hover:text-lavender-700 transition-colors">Privacy Policy</Link>
+              <Link href="#" className="text-gray-500 text-xs hover:text-lavender-700 transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

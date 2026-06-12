@@ -179,9 +179,9 @@ img {
 
 .gradient-footer {
   background:
-    radial-gradient(circle at 15% 20%, rgba(167, 139, 250, 0.2), transparent 36%),
-    radial-gradient(circle at 85% 80%, rgba(124, 58, 237, 0.22), transparent 32%),
-    linear-gradient(160deg, #2a1b49 0%, #35215a 42%, #24163f 100%);
+    radial-gradient(circle at 15% 20%, rgba(167, 139, 250, 0.12), transparent 36%),
+    radial-gradient(circle at 85% 80%, rgba(196, 181, 253, 0.18), transparent 32%),
+    linear-gradient(160deg, #faf8ff 0%, #f5f3ff 42%, #ede9fe 100%);
 }
 
 /* ============================================
