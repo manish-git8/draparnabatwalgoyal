@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { blogs } from '@/data/blogs';
 import { FiArrowRight, FiClock, FiCalendar } from 'react-icons/fi';
@@ -30,18 +31,22 @@ export default function BlogPreview() {
             >
               <Link href={`/blog/${blog.slug}`}>
                 <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-lavender-500/8 hover:border-lavender-100 transition-all duration-400 h-full">
-                  {/* Image placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-lavender-100 to-lavender-200 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-5xl opacity-30">📰</span>
-                    </div>
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-lavender-900/40 to-transparent" />
                     <div className="absolute top-3 left-3">
                       <span className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-xs font-semibold text-lavender-700">
                         {blog.category}
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-3 text-xs text-gray-400">
                       <span className="flex items-center gap-1">

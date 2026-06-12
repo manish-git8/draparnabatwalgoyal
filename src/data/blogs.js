@@ -6,7 +6,7 @@ export const blogs = [
     category: 'Preventive Diagnostics',
     date: 'May 20, 2025',
     readTime: '5 min read',
-    image: '/blog/checkup.jpg',
+    image: '/blog/checkup.png',
     content: `Regular health check-ups are the cornerstone of preventive healthcare. In today's fast-paced world, many people neglect routine screenings until symptoms appear. However, early detection through diagnostic imaging can significantly improve treatment outcomes.
 
 ## Why Regular Check-ups Matter
@@ -33,7 +33,7 @@ At SNG Hospital, Dr. Aparna provides comprehensive diagnostic imaging services t
     category: 'CT Scan Awareness',
     date: 'May 15, 2025',
     readTime: '7 min read',
-    image: '/blog/ct-scan.jpg',
+    image: '/blog/ct-scan.png',
     content: `CT (Computed Tomography) scans are one of the most valuable diagnostic tools in modern medicine. Understanding what to expect can help ease anxiety and ensure the best possible results.
 
 ## What is a CT Scan?
@@ -62,7 +62,7 @@ Results are interpreted by specialist radiologists like Dr. Aparna, who provides
     category: 'Fetal Medicine',
     date: 'May 10, 2025',
     readTime: '6 min read',
-    image: '/blog/fetal.jpg',
+    image: '/blog/fetal.png',
     content: `Fetal medicine imaging is a vital part of prenatal care, helping monitor the growth and development of your baby throughout pregnancy.
 
 ## Key Pregnancy Scans
@@ -97,7 +97,7 @@ Contact your doctor immediately if you experience reduced fetal movements, unusu
     category: 'Radiology',
     date: 'May 5, 2025',
     readTime: '6 min read',
-    image: '/blog/msk.jpg',
+    image: '/blog/msk.png',
     content: `Musculoskeletal (MSK) radiology is a specialized field that focuses on imaging of bones, joints, muscles, and soft tissues. It plays a crucial role in diagnosing sports injuries, arthritis, and various orthopedic conditions.
 
 ## Common Conditions Diagnosed
@@ -130,7 +130,7 @@ Dr. Aparna's fellowship in MSK Radiology provides specialized expertise in diagn
     category: 'Diagnostic Imaging',
     date: 'April 28, 2025',
     readTime: '8 min read',
-    image: '/blog/oncology.jpg',
+    image: '/blog/oncology.png',
     content: `Early detection is the most powerful weapon against cancer. Modern diagnostic imaging plays a pivotal role in identifying cancers at their earliest, most treatable stages.
 
 ## How Imaging Detects Cancer
@@ -167,7 +167,7 @@ Dr. Aparna's fellowship in Oncology provides specialized expertise in cancer ima
     category: 'Women\'s Health',
     date: 'April 20, 2025',
     readTime: '7 min read',
-    image: '/blog/womens-health.jpg',
+    image: '/blog/womens-health.png',
     content: `Women's health requires specialized diagnostic imaging at various life stages. From reproductive health assessments to cancer screening, imaging plays a vital role in maintaining women's well-being.
 
 ## Essential Imaging for Women

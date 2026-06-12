@@ -3,7 +3,6 @@
 import { useState, useMemo } from 'react';
 import BlogCard from './BlogCard';
 import BlogSearch from './BlogSearch';
-import Link from 'next/link';
 
 export default function BlogListClient({ initialPosts }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -43,9 +42,7 @@ export default function BlogListClient({ initialPosts }) {
       {filteredPosts.length > 0 ? (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {filteredPosts.map((post, index) => (
-            <Link href={`/blog/${post.slug}`} key={post.slug} className="block h-full">
-              <BlogCard post={post} index={index} />
-            </Link>
+            <BlogCard key={post.slug} post={post} index={index} />
           ))}
         </div>
       ) : (

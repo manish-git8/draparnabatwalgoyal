@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiCheckCircle, FiHeart } from 'react-icons/fi';
+import { DOCTOR_PROFILE } from '@/lib/site';
 
 export default function DoctorIntro() {
   return (
@@ -21,7 +22,7 @@ export default function DoctorIntro() {
               className="relative w-full aspect-[5/6] rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-2 sm:border-4 border-white shadow-lavender-500/10"
             >
               <Image
-                src="/doctor-profile.jpg"
+                src={DOCTOR_PROFILE}
                 alt="Dr. Aparna Bhatwal Goyal"
                 fill
                 priority

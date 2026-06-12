@@ -6,19 +6,10 @@ import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { FiArrowRight } from 'react-icons/fi';
 import { services } from '@/data/services';
+import { SERVICE_CARD_IMAGES } from '@/lib/site';
 
-const getServiceImage = (slug) => {
-  if (slug === 'ct-scan') return '/images/slider-ct-scan.png';
-  if (slug === 'usg-ultrasound') return '/images/slider-usg.png';
-  if (slug === 'usg-guided-procedures') return '/images/13bd4664-6594-4ac9-ba34-01628126bb95.jpg';
-  if (slug === 'doppler-study') return '/images/service-doppler.svg';
-  if (slug === 'fetal-medicine-imaging') return '/images/slider-fetal-medicine.png';
-  if (slug === 'oncology-imaging') return '/images/service-oncology.svg';
-  if (slug === 'diagnostic-consultation') return '/images/service-consultation.svg';
-  if (slug === 'advanced-imaging') return '/images/cta-bg-network.png';
-  if (slug === 'msk-radiology') return '/images/hero-bg-medical.png';
-  return '/images/hero-bg-medical.png';
-};
+const getServiceImage = (slug) =>
+  SERVICE_CARD_IMAGES[slug] || '/images/cards/consultation.png';
 
 export default function ServicesSection() {
   return (

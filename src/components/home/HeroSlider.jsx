@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
+import { DOCTOR_PROFILE } from '@/lib/site';
 import {
   FiPhone,
   FiCalendar,
@@ -28,7 +29,7 @@ const slides = [
     highlight: 'Best in Advanced Diagnostic Radiology',
     subheadline:
       'Trusted for precision CT, USG, oncology imaging & fetal medicine — compassionate care with 10+ years of clinical excellence in Indore.',
-    image: '/doctor-profile.jpg',
+    image: DOCTOR_PROFILE,
     imageAlt: 'Dr. Aparna Bhatwal Goyal — Senior Radiologist, Indore',
     tags: [
       { icon: FiAward, text: 'MBBS, MD' },
@@ -48,7 +49,7 @@ const slides = [
     highlight: 'High-Resolution Diagnostics',
     subheadline:
       '128-slice CT with AI-assisted analysis, same-day reports, and 3D reconstruction for accurate clinical decisions.',
-    image: '/images/slider-ct-scan.png',
+    image: '/images/cards/ct-scan.png',
     imageAlt: 'Advanced CT scan imaging',
     features: ['128-Slice Scanner', 'AI Analysis', 'Same-Day Reports', '3D Reconstruction'],
     primaryCta: { label: 'Book CT Scan', href: '/appointment?service=ct-scan' },
@@ -63,7 +64,7 @@ const slides = [
     highlight: 'Trusted Diagnostic Imaging',
     subheadline:
       'Consona N9 with ZST+ technology, advanced Doppler flow imaging, and AI-enabled women/fetal tools for fast and reliable diagnostic insights.',
-    image: '/images/slider-usg.png',
+    image: '/images/cards/usg-ultrasound.png',
     imageAlt: 'Ultrasound and USG diagnostics',
     features: ['ZST+ Imaging', 'Color/Power Doppler', 'AI OB-GYN Tools', 'Expert Review'],
     primaryCta: { label: 'Book USG', href: '/appointment?service=usg' },
