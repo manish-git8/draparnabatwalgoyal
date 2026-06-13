@@ -16,25 +16,47 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-padding gradient-cta relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/cta-bg-network.png"
-          alt="Abstract medical network background"
-          fill
-          className="object-cover opacity-15 mix-blend-overlay"
-        />
+    <section className="section-padding relative overflow-hidden bg-lavender-bg">
+      {/* CT & USG background imagery */}
+      <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
+        <div className="relative min-h-[220px] md:min-h-0">
+          <Image
+            src="/images/cards/ct-scan.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="50vw"
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/92 via-lavender-50/88 to-white/95" />
+          <span className="absolute bottom-4 left-6 hidden md:inline-flex rounded-full bg-white/80 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-lavender-700 shadow-sm backdrop-blur-sm">
+            Advanced CT Imaging
+          </span>
+        </div>
+        <div className="relative min-h-[220px] md:min-h-0">
+          <Image
+            src="/images/cards/usg-ultrasound.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="50vw"
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-gradient-to-bl from-white/92 via-lavender-50/88 to-white/95" />
+          <span className="absolute bottom-4 right-6 hidden md:inline-flex rounded-full bg-white/80 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-lavender-700 shadow-sm backdrop-blur-sm">
+            Precision USG
+          </span>
+        </div>
       </div>
-      <div className="absolute inset-0 dot-pattern opacity-10" />
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-[80px]" />
-      
+
+      <div className="absolute inset-0 dot-pattern opacity-30 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-lavender-200/30 rounded-full blur-[120px] pointer-events-none" />
+
       <div className="container-custom relative z-10">
         <SectionHeading
           badge="Why Choose Us"
           title="Why Patients Trust Dr. Aparna"
           subtitle="Excellence in diagnostics backed by specialized training, advanced technology, and compassionate patient care."
-          light={true}
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -47,14 +69,14 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="group"
             >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-7 hover:bg-white/15 transition-all duration-400 h-full">
-                <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5 group-hover:bg-white/25 transition-colors">
-                  <reason.icon className="w-6 h-6 text-white" />
+              <div className="bg-white/90 backdrop-blur-sm border border-lavender-100 rounded-2xl p-7 shadow-md shadow-lavender-500/5 hover:shadow-lg hover:border-lavender-200 transition-all duration-400 h-full">
+                <div className="w-12 h-12 rounded-xl bg-lavender-100 flex items-center justify-center mb-5 group-hover:bg-lavender-500 transition-colors">
+                  <reason.icon className="w-6 h-6 text-lavender-600 group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2" style={{ fontFamily: 'var(--font-outfit)' }}>
+                <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: 'var(--font-outfit)' }}>
                   {reason.title}
                 </h3>
-                <p className="text-sm text-white/70 leading-relaxed">{reason.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{reason.desc}</p>
               </div>
             </motion.div>
           ))}

@@ -1,8 +1,9 @@
 import { services } from '@/data/services';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { FiCheckCircle, FiCalendar, FiArrowLeft, FiClock, FiShield } from 'react-icons/fi';
+import { FiCheckCircle, FiCalendar, FiArrowLeft, FiClock } from 'react-icons/fi';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import WhyChooseBlock from '@/components/services/WhyChooseBlock';
 
 // Generate static routes for all services at build time
 export async function generateStaticParams() {
@@ -88,16 +89,7 @@ export default async function ServiceDetailPage({ params }) {
               </p>
             </div>
 
-            {/* Why Choose Section */}
-            <div className="glass-card p-8 bg-white border border-lavender-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <FiShield className="w-5 h-5 text-lavender-600" />
-                Why Choose Dr. Aparna at SNG Hospital?
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                {service.whyChoose}
-              </p>
-            </div>
+            <WhyChooseBlock slug={service.slug} content={service.whyChoose} />
 
             {/* FAQs */}
             {service.faqs && service.faqs.length > 0 && (
